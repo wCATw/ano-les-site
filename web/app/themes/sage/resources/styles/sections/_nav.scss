@@ -1,0 +1,38 @@
+@use "../helpers/media";
+@use "../helpers/functions";
+
+.nav {
+  display: block;
+
+  @include media.md-down {
+    display: none;
+  }
+
+  &--mobile {
+    z-index: var(--z-top);
+    display: block;
+    position: absolute;
+    top: 55px;
+    bottom: 0;
+    padding: 30px 15px;
+    border-radius: var(--b-radius-sm);
+    background: var(--c-grey-10);
+    transform: translateX(-100%);
+
+    @include media.lg-up {
+      display: none;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.burger {
+  display: block;
+
+  @include media.lg-up {
+    display: none;
+  }
+}

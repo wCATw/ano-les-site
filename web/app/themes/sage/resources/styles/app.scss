@@ -1,0 +1,93 @@
+@use 'blocks';
+@use 'components';
+@use 'sections';
+@use "./helpers/functions";
+
+
+:root {
+  //fonts
+  --f-montserrat: 'Montserrat', sans-serif;
+
+  --f-base: var(--f-montserrat);
+  --f-headings: var(--f-montserrat);
+
+  //colors
+  --c-primary: green;
+  --c-primary-hover: color-mix(in srgb, var(--c-primary) 70%, var(--c-grey00) 30%);
+  --c-primary-dark: darkgreen;
+  --c-primary-light: lightgreen;
+  --c-secondary: blue;
+  --c-secondary-hover: color-mix(in srgb, var(--c-secondary) 70%, var(--c-grey00) 30%);
+  --c-secondary-dark: darkblue;
+  --c-secondary-light: lightblue;
+
+  --c-grey-00: #ffffff;
+  --c-grey-10: #e6e6e6;
+  --c-grey-20: #cccccc;
+  --c-grey-30: #b3b3b3;
+  --c-grey-40: #999999;
+  --c-grey-50: #808080;
+  --c-grey-60: #666666;
+  --c-grey-70: #4d4d4d;
+  --c-grey-80: #333333;
+  --c-grey-90: #1a1a1a;
+  --c-grey-100: #000000;
+
+  --c-error: red;
+  --c-success: green;
+
+  --c-aw-color: #d70000;
+
+  //border-radius
+  --b-radius-xs: 2px;
+  --b-radius-xsm: 5px;
+  --b-radius-sm: 10px;
+  --b-radius: 15px;
+  --b-radius-lg: 30px;
+
+  //z-indexes
+  --z-bottom: 10;
+  --z-middle-bottom: 100;
+  --z-middle: 150;
+  --z-middle-top: 200;
+  --z-top: 5000;
+  --z-top-10: 300;
+  --z-top-20: 400;
+  --z-top-30: 500;
+
+  --shadow: 0 2px 4px 0 color(from var(--c-grey90) srgb r g b / 0.16);
+
+  //container settings
+  --w-container: 1100px;
+  --pi-container: 15px;
+
+  //btns settings
+  --btn-b-radius: var(--b-radius-sm);
+  --btn-f-size: functions.rem(16);
+  --btn-f-size-sm: functions.rem(14);
+  --btn-padding: 10px 20px;
+  --btn-padding-sm: 6px 12px;
+
+  --input-c-placeholder: var(--c-grey-50);
+  --input-c-text: var(--c-grey-80);
+  --input-c-border: var(--c-grey-60);
+  --input-c-bg: var(--c-grey-00);
+  --input-padding: 10px 20px;
+  --input-padding-sm: 6px 12px;
+  --input-b-radius: var(--b-radius-sm);
+  --input-f-size: functions.rem(16);
+  --input-f-size-sm: functions.rem(14);
+
+  --label-f-size: functions.rem(14);
+  --label-c: var(--c-grey-80);
+
+  // form settings
+  --c-input-border: var(--c-grey-60);
+  --p-input: 10px 15px;
+  --b-radius-input: var(--b-radius-sm);
+
+  // animation curves
+  --animation-curve: cubic-bezier(1, 0, 0, 1);
+  --animation-fade-in-curve: cubic-bezier(.19, 1, .22, 1);
+  --animation-slide-curve: cubic-bezier(.76, .02, .29, .97);
+}

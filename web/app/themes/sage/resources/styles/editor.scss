@@ -1,0 +1,11 @@
+@use "./helpers/media";
+@use "./helpers/functions";
+@use "./blocks";
+
+.block-editor-writing-flow.editor-styles-wrapper {
+  padding-inline: 15px;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}

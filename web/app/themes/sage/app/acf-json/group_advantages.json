@@ -1,0 +1,76 @@
+{
+    "key": "group_advantages",
+    "title": "Преимущества",
+    "fields": [
+        {
+            "key": "field_644250093729a",
+            "label": "Преимущества",
+            "name": "advantages",
+            "type": "repeater",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6442502c3729b",
+                    "label": "Иконка",
+                    "name": "image",
+                    "type": "image",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_644250093729a"
+                },
+                {
+                    "key": "field_644250483729c",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_644250093729a"
+                },
+                {
+                    "key": "field_6442506c3729d",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_644250093729a"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

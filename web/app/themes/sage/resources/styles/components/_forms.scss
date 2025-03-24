@@ -1,0 +1,57 @@
+@use "../helpers/functions";
+@use "../helpers/media";
+
+.form-control {
+  margin-bottom: 15px;
+  position: relative;
+
+  label {
+    color: var(--label-c);
+    font-size: var(--label-f-size);
+  }
+
+  input, textarea {
+    color: var(--input-c-text);
+    background: var(--input-c-bg);
+    padding: var(--input-padding);
+    border: 1px solid var(--input-c-border);
+    border-radius: var(--input-b-radius);
+    display: inline-block;
+    font-size: var(--input-f-size);
+
+    &::placeholder {
+      color: var(--input-c-placeholder);
+    }
+
+    .form-control--state-error & {
+      border-color: var(--c-error);
+    }
+
+    .form-control--state-success & {
+      border-color: var(--c-success);
+    }
+  }
+
+  &--sm {
+    input, textarea {
+      font-size: var(--input-f-size-sm);
+      padding: var(--input-padding-sm);
+    }
+  }
+}
+
+.form-control__message {
+  font-size: functions.rem(12);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  translate: 5px 100%;
+
+  .form-control--state-error & {
+    color: var(--c-error);
+  }
+
+  .form-control--state-success & {
+    color: var(--c-success);
+  }
+}

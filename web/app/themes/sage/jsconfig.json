@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/jsconfig",
+  "extends": "@roots/sage/config/jsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "typeRoots": [
+      "node_modules/@roots",
+      "node_modules/@types"
+    ],
+    "baseUrl": "resources",
+    "paths": {
+      "@fonts/*": [
+        "fonts/*"
+      ],
+      "@images/*": [
+        "images/*"
+      ],
+      "@scripts/*": [
+        "scripts/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "~/*": [
+        "./resources/*"
+      ],
+      "@/*": [
+        "./resources/*"
+      ]
+    }
+  },
+  "include": [
+    "resources"
+  ],
+  "exclude": [
+    "node_modules",
+    "public"
+  ]
+}

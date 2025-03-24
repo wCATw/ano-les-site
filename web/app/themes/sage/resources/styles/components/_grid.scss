@@ -1,0 +1,30 @@
+@use "../helpers/media";
+@use "../helpers/functions";
+
+// fade in body animation
+.body {
+  animation: fadeInAnimation ease 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  transition: opacity 0.6s var(--animation-slide-curve);
+  opacity: 1;
+
+  &--hide {
+    opacity: 0;
+  }
+
+  &--fixed {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: var(--w-container);
+  padding-inline: var(--pi-container);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+}

@@ -28,6 +28,11 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "composer",
+      "url": "https://connect.advancedcustomfields.com",
+      "only": ["wpengine/*"]
     }
   ],
   "require": {
@@ -40,13 +45,23 @@
     "roots/wordpress": "6.7.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.2.0",
-    "wpackagist-theme/twentytwentyfive": "^1.0"
+    "wpackagist-plugin/cyr2lat": "^6.3",
+    "wpengine/advanced-custom-fields-pro": "^6.3",
+    "wpackagist-plugin/simple-custom-post-order": "^2.5",
+    "wpackagist-plugin/contact-form-7": "^6.0",
+    "roots/acorn": "^5.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "laravel/pint": "^1.18"
   },
   "config": {
+    "http-basic": {
+      "connect.advancedcustomfields.com": {
+        "username": "b3JkZXJfaWQ9MTQ4NzgwfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOS0wMS0wMyAwOTowNToyMQ==",
+        "password": "https://studio-aw.ru"
+      }
+    },
     "optimize-autoloader": true,
     "preferred-install": "dist",
     "allow-plugins": {

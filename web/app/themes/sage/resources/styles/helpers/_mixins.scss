@@ -1,0 +1,50 @@
+// ellipsis
+@mixin ellipsis($rows, $line-height) {
+  display: block;
+  display: -webkit-box;
+  line-height: $line-height;
+  max-height: $line-height * $rows;
+  min-height: $line-height * $rows;
+  -webkit-line-clamp: $rows;
+
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+
+  /*! autoprefixer: on */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//custom scroll bar
+@mixin custom-scroll($width, $border-width, $scroll-color, $back-color, $border-color, $border-radius: 0) {
+  scrollbar-color: $scroll-color; // for firefox
+  scrollbar-width: thin; // for firefox
+
+  &::-webkit-scrollbar {
+    $height: $width;
+
+    width: $width;
+    height: $height;
+    background-color: $back-color;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba($back-color, 0.8);
+    background-color: $back-color;
+    border-radius: $border-radius;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scroll-color;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+  }
+}
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
