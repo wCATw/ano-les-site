@@ -13,4 +13,4 @@ jobs:
 
       - name: Execute deploy script
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_ADDRESS }} "cd ~/test && ./deploy/deploy.sh"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_ADDRESS }} "cd ~/test && . deploy/deploy.sh"

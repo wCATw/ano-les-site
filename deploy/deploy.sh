@@ -2,9 +2,10 @@
 INTER="php"
 
 git fetch
-git reset --hard origin/master
-composer-php8.1 update
+git reset --hard master
+git pull
+composer update
 cd web/app/themes/sage
-composer-php8.1 update
+composer update
 
 ssh localhost . ~/test/deploy/build.sh
