@@ -7,8 +7,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Execute deploy script via SSH
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Execute deploy script
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_ADDRESS }} "cd ~/test && . deploy/deploy.sh"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_ADDRESS }} "cd ~/test && ./deploy/deploy.sh"
