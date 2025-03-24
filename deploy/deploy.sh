@@ -8,4 +8,4 @@ composer update
 cd web/app/themes/sage
 composer update
 
-ssh localhost . ~/test/deploy/build.sh
+. ~/test/deploy/build.sh
