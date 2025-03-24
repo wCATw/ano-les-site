@@ -1,0 +1,14 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute deploy script via SSH
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_ADDRESS }} "cd ~/test && . deploy/deploy.sh"
